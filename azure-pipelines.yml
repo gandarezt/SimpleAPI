@@ -54,3 +54,11 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'publish artifacts'
     
+
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: '$(Build.ArtifactStagingDirectory)'
+    azureSubscription: 'Free Trial (f15a4425-818b-4735-9788-2fd37ec0229f)'
+    Destination: 'AzureBlob'
+    storage: 'blobreleasepipeline'
+    ContainerName: 'container release'
