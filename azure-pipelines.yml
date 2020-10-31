@@ -61,4 +61,4 @@ steps:
     azureSubscription: 'Free Trial (f15a4425-818b-4735-9788-2fd37ec0229f)'
     Destination: 'AzureBlob'
     storage: 'blobreleasepipeline'
-    ContainerName: 'container release'
+    ContainerName: 'containerrelease'
