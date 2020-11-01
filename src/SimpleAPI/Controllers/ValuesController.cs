@@ -13,12 +13,6 @@ namespace SimpleAPI.Controllers
     {
 
         [HttpGet("Get")]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] { "ola", "ola again" };
-        }
-
-        [HttpGet("Get")]
         public ActionResult<string> GetName()
         {
             return "Tiago Gandarez";
