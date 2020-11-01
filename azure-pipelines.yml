@@ -56,8 +56,9 @@ steps:
     
 
 - task: AzureFileCopy@4
+  continueOnError: true
   inputs:
-    SourcePath: '*.zip'
+    SourcePath: '$(Build.ArtifactStagingDirectory)/*.zip'
     azureSubscription: 'Free Trial (f15a4425-818b-4735-9788-2fd37ec0229f)'
     Destination: 'AzureBlob'
     storage: 'blobreleasepipeline'
